@@ -5,53 +5,232 @@
     <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YarnTale - Sophie the Owl's Crochet School</title>
-    <link rel="stylesheet" href="wix.css">
+    <link rel="stylesheet" href="crochet.css">
 	<link rel="icon" type="image/png" href="webimg/icons/favicon.png">
-
-
 <style>
 
-/* СТИЛЬ ТАБЛИЦЫ СИМВОЛОВ */
 
-.content table.symtb,
-.content table.symtb tr,
-.content table.symtb td {
-    background-color: #ffffff;
+/* =====   YarnTale Crochet School   crochet.css
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 768px) {
+    body {font-size: 14pt;  }
+    .content,
+    .button-menu,
+    nav {        width: 100%;        max-width: 100%;    }
+    .content {        padding: 10px 15px;    }
+    .content h1 { font-size: 20pt; }
+    .content h2 { font-size: 17pt; }
+    .content h3 { font-size: 14pt; }
+    .button-menu {        flex-wrap: wrap;        gap: 8px;        height: auto;    }
+    .button-menu a {        width: auto;        padding: 6px 12px;        font-size: 11pt;    }
+    img {        max-width: 100%;        height: auto;    }
 }
 
-.content table.symtb {
-    width: 900px;
-    border-collapse: collapse;
-    margin: 30px auto;
-    border: 2px solid #F4B183;
+/* ---------- PAGE ---------- */
+body {
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    font-family: "Comic Sans MS", Calibri, Arial, Garamond;
+    font-size: 12pt;
+    color: #663300;
+    line-height: 1.5;
+    text-align: justify;
 }
 
-.content table.symtb th {
-    background-color: #ffffff;
+/* ---------- HEADER ---------- */
+.top-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #ffffff;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.lang-switch {position: absolute;    top: 10px;    right: 20px;    font-size: 10pt;}
+.lang-switch a {    text-decoration: none;    margin-left: 6px;    color: #cc3300;}
+
+/* ---------- FOOTER ---------- */
+.footer {
+    text-align: center;
     padding: 20px;
-    font-size: 20pt;
-    color: #F27805;
-    border-bottom: 2px solid #F4B183;
+    font-size: 10pt;
+    background: #F27805;
+    color: #ffffff;
 }
 
-.content table.symtb td {
+/* ---------- CONTENT ---------- */
+.content {
+    width: 900px;
+    max-width: 900px;
+    margin: 0 auto;
     padding: 10px;
-    border-bottom: 1px solid #eeeeee;
-    vertical-align: middle;
+    background: #ffffff;
+    color: #660000;
 }
 
-.content table.symtb td.symtbl4 { width:200px; font-size:14pt; color:#333; text-align:left; }
-.content table.symtb td.symtbl3 { width:80px; font-size:18pt; font-weight:bold; color:#F27805; text-align:center; }
-.content table.symtb td.symtbl2 { width:100px; text-align:center; }
-
-.content table.symtb td:nth-child(3) {
-    border-right: 1px solid #F4B183;
+.content p {
+    font-size: 12pt;
+    line-height: 1.5;
+    text-align: justify;
+    text-indent: 2em;
+    margin-bottom: 1.2em;
 }
 
-.content table.symtb img.symimg {
-    width:60px;
-    height:auto;
+.content h1 {    text-align: center;    color: #F27805;    font-size: 22pt;}
+.content h2 {    text-align: center;    color: #F27805;    font-size: 18pt;    font-weight: bold;}
+.content h3 {    text-align: center;    color: #cc3300;    font-size: 14pt;    font-weight: bold;}
+.content h4 {
+    font-size: 22pt;
+    width: 900px;
+    text-align: center;
+    line-height: 1.5;
+    color: #990000;
+    text-indent: 0;
+    margin-bottom: 0;
+    font-weight: bold;
 }
+.content h6 {    text-align: center;    color: #cc3300;    font-size: 26pt;    font-weight: bold;    margin: 0;}
+h5.symbol{
+    font-family: Arial, sans-serif;
+    font-size: 60px;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+img.symbol{    width: 100px;    height: 100px;    display: inline-block;    margin: 0;    padding: 0;    border: 0;}
+
+.content a {    color: #993300;    font-weight: bold;    text-decoration: none;}
+.content a:hover {    color: #ff3300;}
+
+
+/* ---------- MENU ---------- */
+
+nav {    width: 900px;    margin: auto;}
+.button-menu {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    width: 900px;
+    height: 40px;
+    margin: 5px auto;
+    padding: 5px 0;
+}
+
+.button-menu a {
+    display: inline-block;
+    width: 145px;
+    padding: 5px;
+    text-align: center;
+    background: #FEEFE2;
+    color: #CA1414;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 12pt;
+    border-top: 1px solid #F36600;
+    border-bottom: 1px solid #F36600;
+    box-shadow: 2px 3px 6px rgba(102,51,0,0.2);
+    transition: all 0.3s ease;
+}
+.button-menu a:hover {    background: #F27805;    color: #ffffff;    transform: translateY(-2px);}
+.button-menu a:active {    color: #ffffff;    background: #d36600;}
+
+
+/* ---------- ANCHORS ---------- */
+a.top {    scroll-margin-top: 250px;    font-size: 10pt;    color: #ff9966;}
+a.chapter {    scroll-margin-top: 250px;    font-size: 11pt;    color: #990000;    text-decoration: none;}
+a.lesson {    scroll-margin-top: 250px;    font-size: 10pt;    color: #990000;    text-decoration: none;}
+
+
+/* ---------- TABLE ---------- */
+.content table{    width:900px;    margin:0;    border-collapse:collapse;    border:1px solid #fdd;    background:#fff0f0;}
+.content table tr{    border-bottom:1px solid #fcc;}
+.content table td{    padding:6px;    font-size:1em;    line-height:1.3em;    text-align:center;    color:#993333;    background:#fff;}
+
+/* ---------- SYMBOL TABLE ---------- */
+.content table.symtb{    width:900px;    margin:30px auto;    border-collapse:collapse;    border:2px solid #F4B183;    background:#fff;}
+.content table.symtb th{    padding:20px;    font-size:20pt;    color:#F27805;    background:#fff;    border-bottom:2px solid #F4B183;}
+.content table.symtb td{    padding:10px;    vertical-align:middle;    border-bottom:1px solid #eee;    background:#fff;}
+.content table.symtb td.symtbl2{    width:100px;    text-align:center;}
+.content table.symtb td.symtbl3{    width:80px;    text-align:center;    font-size:18pt;    font-weight:bold;    color:#F27805;}
+.content table.symtb td.symtbl4{    width:200px;    text-align:left;    font-size:14pt;    color:#333;}
+.content table.symtb td:nth-child(3){    border-right:1px solid #F4B183;}
+.content table.symtb img.symimg{    width:60px;    height:auto;}
+.tbl-img{    width:100px;    height:auto;}
+
+
+
+/* ---------- CARDS ---------- */
+.card{    position:relative;    display:inline-block; width: 950px;    margin: 20px auto;}
+.card img{    display:block;    width:100%;    height:auto;    /*border: 1px solid #F4B183;*/}
+.cardimg{    display:block;    width:100%;    height:auto;    border: 1px solid #F4B183;}
+.cardimg0{    display:block;    width:100%;    height:auto;    border: 0px solid #F4B183;}
+
+.pink{
+    position:absolute;
+    left:550px;
+    top:350px;
+    width:320px;
+    height:160px;
+    padding:8px 12px;
+    box-sizing:border-box;
+    /*background:rgba(255,0,0,0.15);*/
+}
+
+.pink1{
+    position:absolute;
+    left:620px;
+    top:100px;
+    width:320px;
+    height:160px;
+    padding:8px 12px;
+    box-sizing:border-box;
+    /*background:rgba(255,0,0,0.15);*/
+}
+
+.cardlist{    margin:0;    padding-left:18px;}
+.cardlist li{    margin:0;    line-height:1.25;    font-size:1.4rem;    color:#6f6262;    color:#F4B183;    color:#cc3300;}
+
+
+.cardlist{    margin:0;    padding-left:0;    list-style:none;}
+.cardlist li{    margin:0;    line-height:1.25;    font-size:1.4rem;    color:#cc3300;}
+.cardlist li::before{    content:"✿";    margin-right:10px;}
+
+
+
+/* ---------- IMAGE ROWS ---------- */
+.image-row,.image-row1,.image-row2,.image-row3,.image-row3s,.image-row4{    width:900px;    display:flex;}
+.image-row,.image-row2,.image-row3,.image-row3s,.image-row4{    justify-content:space-between;}
+.image-row{gap:10px;}
+.image-row1{    flex-direction:column;    align-items:center;    gap:20px;}
+.image-row1 img{width:850px;height:auto;}
+.image-row2{gap:30px;}
+.image-row3{    gap:15px;    text-align:justify;    font-size:9px;}
+.image-row3s{    gap:45px;    text-align:justify;}
+.image-row4{    gap:6px;    text-align:justify;    font-size:.8em;    line-height:1.1em;    color:#333;}
+
+.image-row p{    font-size:9pt;    line-height:1.4;    text-indent:0;    margin:0;}
+
+/* ---------- IMAGES ---------- */
+.content img{display:inline-block;vertical-align:baseline;}
+.img1,.img2,.img3,.img0,.img3s,.img4{border:1px solid #ffcccc;}
+.img3s,.img4{    margin-top:10px;    border-radius:0;    box-shadow:0 2px 6px rgba(70,0,0,.05);}
+.img1{width:900px;}
+.img2{width:430px;}
+.img3{width:290px;}
+.img0{width:500px;    display:block;    margin:20px auto;    border-radius:0;    box-shadow:0 2px 6px rgba(70,0,0,.05);}
+.img3s{width:270px;}
+.img4{width:220px;}
+.img01{width:70px;margin:0;padding:0;}
+.img_les4{width:800px;border:0;box-shadow:none;}
 
 </style>
 </head>
@@ -71,18 +250,18 @@
 <b>🦉 Crochet School of the Sophie the Owl 🦉</b></p>
 
 <p style="text-align: center; margin-top: -150px; padding: 10px;color: #ff9966;">
-<a href="crochet1_en.html" class="lesson">Lesson 1</a> |
-<a href="crochet2_en.html" class="lesson">Lesson 2</a> |
-<a href="crochet3_en.html" class="lesson">Lesson 3</a> |
-<a href="crochet4_en.html" class="lesson">Lesson 4</a> |
-<a href="crochet5_en.html" class="lesson">Lesson 5</a> |
-<a href="crochet6_en.html" class="lesson">Lesson 6</a> |
-<a href="crochet7_en.html" class="lesson">Lesson 7</a> |
-<a href="crochet8_en.html" class="lesson">Lesson 8</a> |
-<a href="crochet9_en.html" class="lesson">Lesson 9</a> |
-<a href="crochet10_en.html" class="lesson">Lesson 10</a> |
-<a href="crochet11_en.html" class="lesson">Symbols</a> |
-<a href="crochet12_en.html" class="lesson">Glossary</a> 
+<a href="#lesson1" class="lesson">Lesson 1</a> |
+<a href="#lesson2" class="lesson">Lesson 2</a> |
+<a href="#lesson3" class="lesson">Lesson 3</a> |
+<a href="#lesson4" class="lesson">Lesson 4</a> |
+<a href="#lesson5" class="lesson">Lesson 5</a> |
+<a href="#lesson6" class="lesson">Lesson 6</a> |
+<a href="#lesson7" class="lesson">Lesson 7</a> |
+<a href="#lesson8" class="lesson">Lesson 8</a> |
+<a href="#lesson9" class="lesson">Lesson 9</a> |
+<a href="#lesson10" class="lesson">Lesson 10</a> |
+<a href="#lesson11" class="lesson">Symbols</a> |
+<a href="#lesson12" class="lesson">Glossary</a> 
 </p>
 
   <nav class="button-menu" style="margin-top: 80px;">
@@ -93,11 +272,6 @@
     <a href="https://studioyarntale.github.io/yt/mk_en.html" target="_blank">Master-Class</a>
   </nav>
 </header>
-
-
-
-
-
 
 <div class="content">
 <!--<img src="webimg/banners/school_banner_en.jpg" style="box-shadow: 4px 4px 4px #ccc; border: 1px solid #f29933; ext-align:center; width:900px;" alt="Crochet School" />-->
@@ -113,9 +287,6 @@
 <a href="#ch5" class="chapter"> Slip Knot </a> | 
 <a href="#ch6" class="chapter"> Chain Stitch </a> 
 </p>
-
-
-
 
 <a id="ch1" class="chapter"></a>
 <h2>How to choose Yarn and Hook</h2>
@@ -135,10 +306,6 @@ Each type of yarn has a different thickness or "weight," with fingering being th
 Synthetic yarns, such as acrylics, are easier to wash and can be worn by people sensitive to wool. Yarns have labels that provide all the information that you will need to know, such as the type of yarn it is, the amount and/or yardage in the ball or skein, gauge, fiber content and care instructions. Many labels also include free patterns, which are printed on the inside.
 </p>
 <a href="#top" class="top">Top of the page</a>
-
-
-
-
 
 
 <a id="ch2" class="chapter"></a>
@@ -363,9 +530,6 @@ There are two main, widely used ways to hold a crochet hook: <b>"Knife" grip</b>
 <a href="#ch13" class="lesson"> Half Double Crochet </a>|
 <a href="#ch14" class="lesson"> Treble Crochet </a> 
 </p>
-
-
-
 
 
 <a id="ch7" class="chapter"></a>
@@ -2187,155 +2351,12 @@ This edging combines shell stitches with picots at the top to create bold, crown
 
 
 
-<h2>Cords, Tassels and Braids</h2>
-
-<h3>🧵 The Magic of Crochet Cords</h3>
-<p>
-A cord is much more than decoration. In amigurumi and decorative crochet, cords become arms, legs, ears, tails, ties, belts, garlands and even entire compositions. They act like lines in a drawing or melody in a song — small details that bring a character to life and make the image complete.
-</p>
-
-<p>
-A cord can become a necklace, a purse handle, a dress belt, or a picture frame. Working with cords teaches patience, rhythm and attention to detail. Creating a first cord often feels like discovering how to connect separate parts into one harmonious whole.
-</p>
-<a href="#top" class="top">Top of the page</a>
-<br/><br/>
 
 
 
-<h3>✨ Types of Crochet Cords</h3>
-<p>
-Our collection includes a wide variety of cords, each with its own texture, flexibility and purpose.
-</p>
-
-<p>
-🔸 Flat and round cords — each creates a different visual effect<br/>
-🔸 Single- and double-sided cords — double-sided cords are perfect when the back side is visible<br/>
-🔸 Elastic and firm cords — ideal for tails, legs, ties or structural elements<br/>
-🔸 Tubular, twisted, caterpillar, leaf-shaped and lace cords — each carries its own character and mood
-</p>
-
-<p><b>Main categories:</b></p>
-<p>
-✨ Classic cords — chains, slip-stitch cords, twisted yarn cords<br/>
-🧶 Volumetric cords — i-cords, tubular cords, caterpillar cords<br/>
-🌿 Decorative cords — zigzags, twisted, leaf-shaped, lace cords<br/>
-🎀 Functional cords — ties, handles, belts, borders
-</p>
 
 
-<h3>🎨 What Working With Cords Develops</h3>
-<p>
-Crocheting cords helps develop both technical and creative skills:
-</p><p>
-🔸 Technical thinking — calculating length, density and hook size<br/>
-🔸 Aesthetic sense — combining colours, textures and shapes<br/>
-🔸 Composition — how to begin, attach and finish cords neatly<br/>
-🔸 Character design — how shape and movement express emotion
-</p>
 
-<p>
-In the master classes you will learn how to:
-</p><p>
-• calculate cord length and density<br/>
-• choose yarn and hook size<br/>
-• attach cords securely to your work<br/>
-• use cords as accents or structural elements<br/>
-• combine colours and textures creatively
-</p>
-
-
-<h3>🎀 My Favourite Crochet Cords</h3>
-<p>
-Here are the cords most frequently used in my toys and projects. Each one has its own purpose, character and visual style.
-</p>
-<h3>🧶 Longitudinal Crochet Cords (Precise Length)</h3>
-
-<p>
-🔶 <b>Traditional Chain</b> — the simplest and most universal cord.
-</p>
-<div class="image-row" >
-<img class="img1" src="webimg/cords/chain.jpg" alt="Crochet Cords - Chain"  />
-</div>
-<p>
-🔶 <b>2-Loop and 3-Loop I-Cord</b> — smooth tubular cords worked with two or three active loops. Soft, rounded and perfect for limbs and tails.
-</p>
-<div class="image-row2" >
-<img class="img2" src="webimg/cords/icord2.jpg" alt="Crochet Cords - 2 loop i-Cord"  />
-<img class="img2" src="webimg/cords/icord3.jpg" alt="Crochet Cords - 3 loop i-Cord"  />
-</div>
-<p>
-🔶 <b>Fishbone Cord</b> — dense and braid-like with very little stretch. Holds its shape beautifully.
-</p>
-<div class="image-row" >
-<img class="img1" src="webimg/cords/fichbone.jpg" alt="Crochet Cords - Fichbone cord"  />
-</div>
-<p>
-🔶 <b>Modified Fishbone Cord</b> — a textured variation with added chain loops.
-</p>
-<div class="image-row" >
-<img class="img1" src="webimg/cords/knotted2.jpg" alt="Crochet Cords - Modified Fishbone Cord"  />
-</div>
-<p>
-🔶 <b>Caterpillar (Romanian) Cord</b> — decorative, flexible and double-sided. Bends easily but does not stretch, ideal for curved shapes.
-</p>
-<div class="image-row" >
-<img class="img1" src="webimg/cords/caterpillar.jpg" alt="Crochet Cords - Caterpillar Cord"  />
-</div>
-<p>
-🔶 <b>Knotted Cord</b> — elastic ribbon-like cord with a playful zigzag texture.
-</p>
-<div class="image-row" >
-<img class="img1" src="webimg/cords/knotted.jpg" alt="Crochet Cords - Knotted Cord"  />
-</div>
-<p>
-🔶 <b>Foundation Cord (One Strand)</b> — moderately elastic and looser than a chain. Excellent for starting crochet fabric without tension.
-</p>
-<div class="image-row" >
-<img class="img1" src="webimg/cords/foundation1st.jpg" alt="Crochet Cords - Foundation Cord"  />
-</div>
-<p>
-🔶 <b>Foundation Cord (Two Strands)</b> — similar to the single-strand version but thicker and more stable.
-</p>
-<div class="image-row" >
-<img class="img1" src="webimg/cords/foundation2st.jpg" alt="Crochet Cords - Foundation Cord"  />
-</div>
-<p>
-🔶 <b>Double Cord</b> — square-profile cord created using a different yarn grab technique.
-</p>
-<div class="image-row" >
-<img class="img1" src="webimg/cords/double.jpg" alt="Crochet Cords - Double Cord"  />
-</div>
-<p>
-🔶 <b>Two-Thread Alternating Cords</b><br/>
-• Braided cord — dense and non-stretchy, can be made with hook or fingers<br/>
-• Stretchy two-strand cord — elastic and flexible
-</p>
-<div class="image-row2" >
-<img class="img2" src="webimg/cords/braided.jpg" alt="Crochet Cords - Braided cord"  />
-<img class="img2" src="webimg/cords/stretchy.jpg" alt="Crochet Cords - Stretchy two-strand cord"  />
-</div>
-<p>
-🔶 <b>Spiral Cord</b> — tubular cord worked in continuous spiral using front-loop single crochet. Hollow inside, perfect for inserting a core to reduce stretch.
-</p>
-<div class="image-row" >
-<img class="img1" src="webimg/cords/spiral1.jpg" alt="Crochet Cords - Spiral Cord"  />
-</div>
-<p>
-🔶 <b>Petal / Pearl Cord</b> — dense, round cord made with slip stitches and single crochets. Twisted and rope-like.
-</p>
-
-
-<h3>🌿 Lace Cords and Braids</h3>
-<p>
-🔸 Zig-zag braid<br/>
-🔸 Pearl braid<br/>
-🔸 Leaf braid<br/>
-🔸 Circular slip-stitch cord
-</p><p>
-Cords are both structural and expressive. They shape movement, create balance and give crocheted characters their personality and charm.
-</p>
-<a href="#top" class="top">Top of the page</a>
-<br/><br/>
 
 
 
@@ -2399,144 +2420,1205 @@ In the following sections we explore textured stitches that imitate curls, fur, 
 <a href="#top" class="top">Top of the page</a>
 <br/><br/>
 
+<p>This collection contains a selection of textured crochet stitch patterns that can be useful for amigurumi toys, decorative details, clothing, blankets, bags, and other creative projects.
 
+There are thousands of crochet stitch patterns in the world, and new variations appear every year. This collection is not intended to be a complete encyclopedia. Instead, it focuses on interesting textures, structural techniques, and decorative effects that can inspire your own designs.
 
-<h2>Hedgehog Pattern</h2>
-<p>
-This textured stitch creates small spikes that resemble hedgehog quills or grass.
-The base row is worked in BLO single crochet to leave the front loops free.
-</p><p>
-In the next row, work into the free front loops:
-<br/>🔸 Slip stitch
-<br/>🔸 Chain 3
-<br/>🔸 Work 3 single crochets back down the chain
-<br/>🔸 Slip stitch into the same loop
-</p><p>
-The result is a row of tiny spikes that stand upright, perfect for hedgehogs, monsters, plants and playful textures.
-</p>
-<div class="image-row2" >
-<img class="img2" src="webimg/texture/tex1.jpg" alt="Crochet Cords - Braided cord"  />
-<img class="img2" src="webimg/texture/tex2.jpg" alt="Crochet Cords - Stretchy two-strand cord"  />
-</div>
+All samples were crocheted, photographed, and charted specifically for Sophie's the Owl Crochet School.</p>
+
 <a href="#top" class="top">Top of the page</a>
 <br/><br/>
 
-
-
-
-
-<h2>Poodle Pattern</h2>
-<p>
-This playful texture creates soft curly loops that resemble poodle fur or fluffy wool.
-The base row is worked in single crochet through the back loop only (BLO SC), leaving the front loops free.
-</p><p>
-In the following row, work into the free front loops:
-<br/>🔸 Slip stitch
-<br/>🔸 Chain 5
-<br/>🔸 Slip stitch into the same loop
-</p><p>
-These small chain loops curl naturally and create a soft, bouncy surface perfect for hair, fur, sheep, toys and decorative trims.
-</p>
-<div class="image-row2" >
-<img class="img2" src="webimg/texture/tex3.jpg" alt="Crochet Cords - Braided cord"  />
-<img class="img2" src="webimg/texture/tex4.jpg" alt="Crochet Cords - Stretchy two-strand cord"  />
+<div class="card">
+    <h2>Seed Stitch Pattern</h2>
+    <img class="cardimg" src="webimg/card/q1.jpg" alt="Seed Stitch Pattern">
+    <div class="pink">
+        <ul class="cardlist">
+            <li>Dense</li>
+            <li>Stretchy</li>
+            <li>Fully reversible</li>
+            <li>Soft texture</li>
+            <li>Beginner friendly</li>
+        </ul>
+    </div>
+    <p>Seed Stitch Pattern Description</p>
 </div>
 <a href="#top" class="top">Top of the page</a>
-<br/><br/>
+<br/><br/><br/>
 
 
-
-<h2>Loop Stitch (Fur Stitch)</h2>
-<p>
-The loop stitch creates long soft loops that imitate fur, hair or fringe.
-Loops are pulled to the desired length and secured with a stitch in the same spot.
-</p><p>
-Loop stitches are ideal for animals, dolls, tassels, decorative lace and fluffy textures.
-Loop length can be varied to create different effects.
-</p>
-<div class="image-row2" >
-<img class="img2" src="webimg/texture/tex5.jpg" alt="Crochet Cords - Braided cord"  />
-<img class="img2" src="webimg/texture/tex6.jpg" alt="Crochet Cords - Stretchy two-strand cord"  />
+<div class="card">
+    <h2>Moss Stitch Pattern</h2>
+    <img class="cardimg" src="webimg/card/q2.jpg" alt="Moss Stitch Pattern">
+    <div class="pink">
+        <ul class="cardlist">
+            <li>Dense</li>
+            <li>Stretchy</li>
+            <li>Fully reversible</li>
+            <li>Soft texture</li>
+            <li>Beginner friendly</li>
+        </ul>
+    </div>
+    <p> Moss Stitch Pattern Description</p>
 </div>
 <a href="#top" class="top">Top of the page</a>
-<br/><br/>
+<br/><br/><br/>
 
 
-<h2>Honeycomb Stitch (Crochet Smock Stitch)</h2>
-<p>
-This stitch creates a raised geometric texture that resembles a honeycomb pattern.
-It is formed by pulling up elongated loops and securing them in grouped stitches.
-</p><p>
-The result is a structured, quilted texture perfect for bags, blankets, accessories and decorative panels.
-</p>
-<div class="image-row2" >
-<img class="img2" src="webimg/texture/tex7.jpg" alt="Crochet Cords - Braided cord"  />
-<img class="img2" src="webimg/texture/tex8.jpg" alt="Crochet Cords - Stretchy two-strand cord"  />
+
+<div class="card">
+    <h2>Even Moss Stitch Pattern</h2>
+    <img class="cardimg" src="webimg/card/q3.jpg" alt="Even Moss Stitch Pattern">
+    <div class="pink">
+        <ul class="cardlist">
+            <li>Dense</li>
+            <li>Stretchy</li>
+            <li>Fully reversible</li>
+            <li>Soft texture</li>
+            <li>Beginner friendly</li>
+        </ul>
+    </div>
+    <p>Even Moss Stitch Pattern Description</p>
 </div>
 <a href="#top" class="top">Top of the page</a>
-<br/><br/>
+<br/><br/><br/>
 
 
-<h2>Crocodile Stitch (Feather Stitch)</h2>
-<p>
-One of the most famous textured stitches, the crocodile stitch creates layered scales that resemble feathers or dragon skin.
-</p><p>
-Stitches are worked around the posts of previous stitches, forming overlapping layers.
-This stitch is perfect for wings, feathers, fantasy creatures and statement decorative projects.
-</p>
-<div class="image-row2" >
-<img class="img2" src="webimg/texture/tex9.jpg" alt="Crochet Cords - Braided cord"  />
-<img class="img2" src="webimg/texture/tex14.jpg" alt="Crochet Cords - Stretchy two-strand cord"  />
+<div class="card">
+    <h2>Rice Stitch Pattern</h2>
+    <img class="cardimg" src="webimg/card/q4.jpg" alt="Rice Stitch Pattern">
+    <div class="pink">
+        <ul class="cardlist">
+            <li>Dense</li>
+            <li>Stretchy</li>
+            <li>Fully reversible</li>
+            <li>Soft texture</li>
+            <li>Beginner friendly</li>
+        </ul>
+    </div>
+    <p>Rice Stitch Pattern Description</p>
 </div>
 <a href="#top" class="top">Top of the page</a>
-<br/><br/>
+<br/><br/><br/>
 
 
-<h2>Crochet Ribbing</h2>
-<p>
-Crochet ribbing is created by working stitches into the front loop only (FLO) or back loop only (BLO).
-This creates flexible ridges that resemble knitted ribbing.
-</p><p>
-Ribbing is essential for cuffs, hats, clothing, shoe edges and structured borders.
-It helps fabric stretch and keep its shape.
+
+<div class="card">
+    <h2>Vertical Ridged Pattern</h2>
+    <img class="cardimg" src="webimg/card/q5.jpg" alt="Vertical Ridged Pattern">
+    <div class="pink">
+        <ul class="cardlist">
+            <li>Dense</li>
+            <li>Stretchy</li>
+            <li>Fully reversible</li>
+            <li>Soft texture</li>
+            <li>Beginner friendly</li>
+        </ul>
+    </div>
+    <p>Vertical Ridged Pattern Description</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/><br/>
+
+
+<div class="card">
+    <h2>Elastic Ribbon Pattern</h2>
+    <img class="cardimg" src="webimg/card/q6.jpg" alt="Elastic Ribbon Pattern">
+    <div class="pink">
+        <ul class="cardlist">
+            <li>Dense</li>
+            <li>Stretchy</li>
+            <li>Fully reversible</li>
+            <li>Soft texture</li>
+            <li>Beginner friendly</li>
+        </ul>
+    </div>
+    <p>Elastic Ribbon Pattern Description</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/><br/>
+
+
+<div class="card">
+    <h2>Horisontal Ribbon Pattern</h2>
+    <img class="cardimg" src="webimg/card/q7.jpg" alt="Horisontal Ribbon Pattern">
+    <div class="pink">
+        <ul class="cardlist">
+            <li>Dense</li>
+            <li>Stretchy</li>
+            <li>Fully reversible</li>
+            <li>Soft texture</li>
+            <li>Beginner friendly</li>
+        </ul>
+    </div>
+    <p>Horisontal Ribbon Pattern Description</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/><br/>
+
+
+
+<div class="card">
+    <h2>Pebble Stitch Pattern</h2>
+    <img class="cardimg" src="webimg/card/q8.jpg" alt="Pebble Stitch Pattern">
+    <div class="pink">
+        <ul class="cardlist">
+            <li>Dense</li>
+            <li>Stretchy</li>
+            <li>Fully reversible</li>
+            <li>Soft texture</li>
+            <li>Beginner friendly</li>
+        </ul>
+    </div>
+    <p>Pebble Stitch Pattern Description</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/><br/>
+
+
+<div class="card">
+    <h2>Suzette Stitch Pattern</h2>
+    <img class="cardimg" src="webimg/card/q9.jpg" alt="Suzette Stitch Pattern">
+    <div class="pink">
+        <ul class="cardlist">
+            <li>Dense</li>
+            <li>Stretchy</li>
+            <li>Fully reversible</li>
+            <li>Soft texture</li>
+            <li>Beginner friendly</li>
+        </ul>
+    </div>
+    <p>Suzette Stitch Pattern Description</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/><br/>
+
+
+<div class="card">
+    <h2>Alpine Stitch Pattern</h2>
+    <img class="cardimg" src="webimg/card/q10.jpg" alt="Alpine Stitch Pattern">
+    <div class="pink">
+        <ul class="cardlist">
+            <li>Dense</li>
+            <li>Stretchy</li>
+            <li>Fully reversible</li>
+            <li>Soft texture</li>
+            <li>Beginner friendly</li>
+        </ul>
+    </div>
+    <p>Alpine Stitch Pattern Description</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/><br/>
+
+
+<div class="card">
+    <h2>Waffle Stitch Pattern</h2>
+    <img class="cardimg" src="webimg/card/q11.jpg" alt="Waffle Stitch Pattern">
+    <div class="pink">
+        <ul class="cardlist">
+            <li>Dense</li>
+            <li>Stretchy</li>
+            <li>Fully reversible</li>
+            <li>Soft texture</li>
+            <li>Beginner friendly</li>
+        </ul>
+    </div>
+    <p>Waffle Stitch Pattern Description</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/><br/>
+
+
+<div class="card">
+    <h2>Zigzag Waffle Stitch Pattern</h2>
+    <img class="cardimg" src="webimg/card/q12.jpg" alt="Zigzag Waffle Stitch Pattern">
+    <div class="pink">
+        <ul class="cardlist">
+            <li>Dense</li>
+            <li>Stretchy</li>
+            <li>Fully reversible</li>
+            <li>Soft texture</li>
+            <li>Beginner friendly</li>
+        </ul>
+    </div>
+    <p>Zigzag Waffle Stitch Pattern Description</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/><br/>
+
+
+<div class="card">
+    <h2>Twisted Stitch Pattern</h2>
+    <img class="cardimg" src="webimg/card/q13.jpg" alt="Twisted Stitch Pattern">
+    <div class="pink">
+        <ul class="cardlist">
+            <li>Dense</li>
+            <li>Stretchy</li>
+            <li>Fully reversible</li>
+            <li>Soft texture</li>
+            <li>Beginner friendly</li>
+        </ul>
+    </div>
+    <p>Twisted Stitch Pattern Description</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/><br/>
+
+
+<div class="card">
+    <h2>Basket Weave Stitch</h2>
+    <img class="cardimg" src="webimg/card/q14.jpg" alt="Basket Weave Stitch">
+    <div class="pink">
+        <ul class="cardlist">
+            <li>Dense</li>
+            <li>Stretchy</li>
+            <li>Fully reversible</li>
+            <li>Soft texture</li>
+            <li>Beginner friendly</li>
+        </ul>
+    </div>
+    <p>Basket Weave Stitch Description</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/><br/>
+
+
+<div class="card">
+    <h2>Popcorn Stitch Pattern</h2>
+    <img class="cardimg" src="webimg/card/q15.jpg" alt="Popcorn Stitch Pattern">
+    <div class="pink">
+        <ul class="cardlist">
+            <li>Dense</li>
+            <li>Stretchy</li>
+            <li>Fully reversible</li>
+            <li>Soft texture</li>
+            <li>Beginner friendly</li>
+        </ul>
+    </div>
+    <p>Popcorn Stitch Pattern Description: Basket weave is created by alternating front post double crochet (FPDC) and back post double crochet (BPDC).
+
+This technique forms a woven texture that looks like interlaced strips. It adds depth, structure and a strong decorative effect to crochet fabric.</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/><br/>
+
+
+<div class="card">
+    <h2>Rosette Stitc Pattern</h2>
+    <img class="cardimg" src="webimg/card/q16.jpg" alt="Rosette Stitc Pattern">
+    <div class="pink">
+        <ul class="cardlist">
+            <li>Dense</li>
+            <li>Stretchy</li>
+            <li>Fully reversible</li>
+            <li>Soft texture</li>
+            <li>Beginner friendly</li>
+        </ul>
+    </div>
+    <p>Rosette Stitc Pattern Description</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/><br/>
+
+
+<div class="card">
+    <h2>Textured Shell Stitch Pattern</h2>
+    <img class="cardimg" src="webimg/card/q17.jpg" alt="Textured Shell Stitch Pattern">
+    <div class="pink">
+        <ul class="cardlist">
+            <li>Dense</li>
+            <li>Stretchy</li>
+            <li>Fully reversible</li>
+            <li>Soft texture</li>
+            <li>Beginner friendly</li>
+        </ul>
+    </div>
+    <p>Waffle Stitch Pattern Description</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/><br/>
+
+
+<div class="card">
+    <h2>Wheat Ear Stitch Pattern</h2>
+    <img class="cardimg" src="webimg/card/q18.jpg" alt="Wheat Ear Stitch Pattern">
+    <div class="pink">
+        <ul class="cardlist">
+            <li>Dense</li>
+            <li>Stretchy</li>
+            <li>Fully reversible</li>
+            <li>Soft texture</li>
+            <li>Beginner friendly</li>
+        </ul>
+    </div>
+    <p>Wheat Ear Stitch Pattern Description</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/><br/>
+
+
+
+
+<div class="card">
+    <h2>Wave Stitch Pattern</h2>
+    <img class="cardimg" src="webimg/card/q19.jpg" alt="Wave Stitch Pattern">
+    <div class="pink">
+        <ul class="cardlist">
+            <li>Dense</li>
+            <li>Stretchy</li>
+            <li>Fully reversible</li>
+            <li>Soft texture</li>
+            <li>Beginner friendly</li>
+        </ul>
+    </div>
+    <p>Wave Stitch Pattern Description</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/><br/>
+
+
+
+<div class="card">
+    <h2>Cobblestone Stitch Pattern</h2>
+    <img class="cardimg" src="webimg/card/q20.jpg" alt="Cobblestone Stitch Pattern">
+    <div class="pink">
+        <ul class="cardlist">
+            <li>Dense</li>
+            <li>Stretchy</li>
+            <li>Fully reversible</li>
+            <li>Soft texture</li>
+            <li>Beginner friendly</li>
+        </ul>
+    </div>
+    <p>Cobblestone Stitch Pattern Description</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/><br/>
+
+
+<div class="card">
+    <h2>Fabric Weave Pattern</h2>
+    <img class="cardimg" src="webimg/card/q21.jpg" alt="Fabric Weave Pattern">
+    <div class="pink">
+        <ul class="cardlist">
+            <li>Dense</li>
+            <li>Stretchy</li>
+            <li>Fully reversible</li>
+            <li>Soft texture</li>
+            <li>Beginner friendly</li>
+        </ul>
+    </div>
+    <p>Fabric Weave Pattern Description</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/><br/>
+
+
+<div class="card">
+    <h2>Harlequin Stitch Pattern</h2>
+    <img class="cardimg" src="webimg/card/q22.jpg" alt="Harlequin Stitch Pattern">
+    <div class="pink">
+        <ul class="cardlist">
+            <li>Dense</li>
+            <li>Stretchy</li>
+            <li>Fully reversible</li>
+            <li>Soft texture</li>
+            <li>Beginner friendly</li>
+        </ul>
+    </div>
+    <p>Harlequin Stitch Pattern Description</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/><br/>
+
+
+<div class="card">
+    <h2>Crocodile Stitch (Feather Stitch)</h2>
+    <img class="cardimg" src="webimg/card/q23.jpg" alt="Crocodile Stitch (Feather Stitch)">
+    <div class="pink">
+        <ul class="cardlist">
+            <li>Dense</li>
+            <li>Stretchy</li>
+            <li>Fully reversible</li>
+            <li>Soft texture</li>
+            <li>Beginner friendly</li>
+        </ul>
+    </div>
+    <p>Crocodile Stitch (Feather Stitch) Description: One of the most famous textured stitches, the crocodile stitch creates layered scales that resemble feathers or dragon skin.
+
+Stitches are worked around the posts of previous stitches, forming overlapping layers. This stitch is perfect for wings, feathers, fantasy creatures and statement decorative projects.</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/><br/>
+
+
+<div class="card">
+    <h2>Floral Stitch Pattern</h2>
+    <img class="cardimg" src="webimg/card/q24.jpg" alt="Floral Stitch Pattern">
+    <div class="pink">
+        <ul class="cardlist">
+            <li>Dense</li>
+            <li>Stretchy</li>
+            <li>Fully reversible</li>
+            <li>Soft texture</li>
+            <li>Beginner friendly</li>
+        </ul>
+    </div>
+    <p>Floral Stitch Pattern Description</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/><br/>
+
+
+<div class="card">
+    <h2>Loop Stitch (Fur Stitch)</h2>
+    <img class="cardimg" src="webimg/card/q25.jpg" alt="Loop Stitch (Fur Stitch)">
+    <div class="pink">
+        <ul class="cardlist">
+            <li>Dense</li>
+            <li>Stretchy</li>
+            <li>Fully reversible</li>
+            <li>Soft texture</li>
+            <li>Beginner friendly</li>
+        </ul>
+    </div>
+    <p>Loop Stitch (Fur Stitch) Description: The loop stitch creates long soft loops that imitate fur, hair or fringe. Loops are pulled to the desired length and secured with a stitch in the same spot.
+
+Loop stitches are ideal for animals, dolls, tassels, decorative lace and fluffy textures. Loop length can be varied to create different effects.
 </p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/><br/>
 
 
-<h2>Chevron Texture (BLO)</h2>
-<p>
-A textured zigzag surface created by working increases and decreases in back loop only single crochet.
-</p><p>
+<div class="card">
+    <h2>Coloured Puff Stitch Pattern</h2>
+    <img class="cardimg" src="webimg/card/q26.jpg" alt="Coloured Puff Stitch Pattern">
+    <div class="pink">
+        <ul class="cardlist">
+            <li>Dense</li>
+            <li>Stretchy</li>
+            <li>Fully reversible</li>
+            <li>Soft texture</li>
+            <li>Beginner friendly</li>
+        </ul>
+    </div>
+    <p>Coloured Puff Stitch Pattern Description</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/><br/>
+
+
+<div class="card">
+    <h2>Bobble Braid Pattern</h2>
+    <img class="cardimg" src="webimg/card/q27.jpg" alt="Bobble Braid Pattern">
+    <div class="pink">
+        <ul class="cardlist">
+            <li>Dense</li>
+            <li>Stretchy</li>
+            <li>Fully reversible</li>
+            <li>Soft texture</li>
+            <li>Beginner friendly</li>
+        </ul>
+    </div>
+    <p>Bobble Braid Pattern Description</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/><br/>
+
+
+<div class="card">
+    <h2>Chevron Texture (BLO)</h2>
+    <img class="cardimg" src="webimg/card/q28.jpg" alt="Chevron Texture (BLO)">
+    <div class="pink">
+        <ul class="cardlist">
+            <li>Dense</li>
+            <li>Stretchy</li>
+            <li>Fully reversible</li>
+            <li>Soft texture</li>
+            <li>Beginner friendly</li>
+        </ul>
+    </div>
+    <p>Chevron Texture (BLO) Description: A textured zigzag surface created by working increases and decreases in back loop only single crochet.
+
 This technique creates a natural leaf-like surface and is perfect for leaves, waves and decorative panels.
 </p>
-<div class="image-row2" >
-<img class="img2" src="webimg/texture/tex10.jpg" alt="Crochet Cords - Braided cord"  />
-<img class="img2" src="webimg/texture/tex11.jpg" alt="Crochet Cords - Stretchy two-strand cord"  />
 </div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/><br/>
+
+
+<div class="card">
+    <h2>Crochet Ribbing Pattern</h2>
+    <img class="cardimg" src="webimg/card/q29.jpg" alt="Crochet Ribbing">
+    <div class="pink">
+        <ul class="cardlist">
+            <li>Dense</li>
+            <li>Stretchy</li>
+            <li>Fully reversible</li>
+            <li>Soft texture</li>
+            <li>Beginner friendly</li>
+        </ul>
+    </div>
+    <p>Crochet Ribbingn Description: Crochet ribbing is created by working stitches into the front loop only (FLO) or back loop only (BLO). This creates flexible ridges that resemble knitted ribbing.
+
+Ribbing is essential for cuffs, hats, clothing, shoe edges and structured borders. It helps fabric stretch and keep its shape.</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/><br/>
+
+
+<div class="card">
+    <h2>Serpentine Pattern</h2>
+    <img class="cardimg" src="webimg/card/q30.jpg" alt="Serpentine Pattern">
+    <div class="pink">
+        <ul class="cardlist">
+            <li>Dense</li>
+            <li>Stretchy</li>
+            <li>Fully reversible</li>
+            <li>Soft texture</li>
+            <li>Beginner friendly</li>
+        </ul>
+    </div>
+    <p>Serpentine Pattern Description</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/><br/>
+
+
+<div class="card">
+    <h2>Hedgehog Stitch Pattern</h2>
+    <img class="cardimg" src="webimg/card/q31.jpg" alt="Hedgehog Pattern">
+    <div class="pink">
+        <ul class="cardlist">
+            <li>Dense</li>
+            <li>Stretchy</li>
+            <li>Fully reversible</li>
+            <li>Soft texture</li>
+            <li>Beginner friendly</li>
+        </ul>
+    </div>
+    <p>Hedgehog Pattern Description: This textured stitch creates small spikes that resemble hedgehog quills or grass. The base row is worked in BLO single crochet to leave the front loops free.
+
+In the next row, work into the free front loops:
+🔸 Slip stitch
+🔸 Chain 3
+🔸 Work 3 single crochets back down the chain
+🔸 Slip stitch into the same loop
+
+The result is a row of tiny spikes that stand upright, perfect for hedgehogs, monsters, plants and playful textures.</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/><br/>
+
+
+<div class="card">
+    <h2>Poodle Stitch Pattern</h2>
+    <img class="cardimg" src="webimg/card/q32.jpg" alt="Poodle Pattern">
+    <div class="pink">
+        <ul class="cardlist">
+            <li>Dense</li>
+            <li>Stretchy</li>
+            <li>Fully reversible</li>
+            <li>Soft texture</li>
+            <li>Beginner friendly</li>
+        </ul>
+    </div>
+    <p>Poodle Pattern Description: This playful texture creates soft curly loops that resemble poodle fur or fluffy wool. The base row is worked in single crochet through the back loop only (BLO SC), leaving the front loops free.
+
+In the following row, work into the free front loops:
+🔸 Slip stitch
+🔸 Chain 5
+🔸 Slip stitch into the same loop
+
+These small chain loops curl naturally and create a soft, bouncy surface perfect for hair, fur, sheep, toys and decorative trims.</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/><br/>
+
+
+<div class="card">
+    <h2>Jacob's Ladder Stitch</h2>
+    <img class="cardimg" src="webimg/card/q33.jpg" alt="Jacob's Ladder Stitch">
+    <div class="pink">
+        <ul class="cardlist">
+            <li>Dense</li>
+            <li>Stretchy</li>
+            <li>Fully reversible</li>
+            <li>Soft texture</li>
+            <li>Beginner friendly</li>
+        </ul>
+    </div>
+    <p>Jacob's Ladder Stitch Description: Jacob’s Ladder creates long vertical chains that are later pulled through each other to form dramatic ladders or braids.
+
+This technique adds movement and sculptural texture and is often used in lace and decorative crochet.</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/><br/>
+
+
+
+<div class="card">
+    <h2>Owl Feather Pattern</h2>
+    <img class="cardimg" src="webimg/card/q34.jpg" alt="Owl Feather Pattern">
+    <div class="pink">
+        <ul class="cardlist">
+            <li>Dense</li>
+            <li>Stretchy</li>
+            <li>Fully reversible</li>
+            <li>Soft texture</li>
+            <li>Beginner friendly</li>
+        </ul>
+    </div>
+    <p>Owl Feather Pattern Description</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/><br/>
+
+
+
+<div class="card">
+    <h2>Cross Stitch Pattern</h2>
+    <img class="cardimg" src="webimg/card/q35.jpg" alt="Cross Stitch Pattern">
+    <div class="pink">
+        <ul class="cardlist">
+            <li>Dense</li>
+            <li>Stretchy</li>
+            <li>Fully reversible</li>
+            <li>Soft texture</li>
+            <li>Beginner friendly</li>
+        </ul>
+    </div>
+    <p>Cross Stitch Pattern Description</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/><br/>
+
+
+
+
+<div class="card">
+    <h2>Star Stitch Pattern</h2>
+    <img class="cardimg" src="webimg/card/q36.jpg" alt="Star Stitch Pattern">
+    <div class="pink">
+        <ul class="cardlist">
+            <li>Dense</li>
+            <li>Stretchy</li>
+            <li>Fully reversible</li>
+            <li>Soft texture</li>
+            <li>Beginner friendly</li>
+        </ul>
+    </div>
+    <p>Star Stitch Pattern Description</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/><br/>
+
+
+
+
+<div class="card">
+    <h2>Honeycomb Stitch (Crochet Smock Stitch)</h2>
+    <img class="cardimg" src="webimg/card/q37.jpg" alt="Honeycomb Stitch (Crochet Smock Stitch)">
+    <div class="pink">
+        <ul class="cardlist">
+            <li>Dense</li>
+            <li>Stretchy</li>
+            <li>Fully reversible</li>
+            <li>Soft texture</li>
+            <li>Beginner friendly</li>
+        </ul>
+    </div>
+    <p>Honeycomb Stitch (Crochet Smock Stitch) Description: This stitch creates a raised geometric texture that resembles a honeycomb pattern. It is formed by pulling up elongated loops and securing them in grouped stitches.
+
+The result is a structured, quilted texture perfect for bags, blankets, accessories and decorative panels.</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/><br/>
+
+
+
+
+<div class="card">
+    <h2>Lace Pattern </h2>
+    <img class="cardimg0" src="webimg/card/q_lace0.jpg" alt="Lace Pattern">
+     <p>Lace Pattern Description</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/></br/>
+
+<div class="card">
+    <h2>Lace Pattern 1</h2>
+    <img class="cardimg0" src="webimg/card/q_lace1.jpg" alt="Lace Pattern">
+     <p>Lace Pattern Description</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/></br/>
+
+
+<div class="card">
+    <h2>Lace Pattern 2</h2>
+    <img class="cardimg0" src="webimg/card/q_lace2.jpg" alt="Lace Pattern">
+     <p>Lace Pattern Description</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/></br/>
+
+<div class="card">
+    <h2>Lace Pattern 3</h2>
+    <img class="cardimg0" src="webimg/card/q_lace3.jpg" alt="Lace Pattern">
+     <p>Lace Pattern Description</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/></br/>
+
+<div class="card">
+    <h2>Lace Pattern 4</h2>
+    <img class="cardimg0" src="webimg/card/q_lace4.jpg" alt="Lace Pattern">
+     <p>Lace Pattern Description</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/></br/>
+
+<div class="card">
+    <h2>Lace Pattern 5</h2>
+    <img class="cardimg0" src="webimg/card/q_lace5.jpg" alt="Lace Pattern">
+     <p>Lace Pattern Description</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/></br/>
+
+<div class="card">
+    <h2>Lace Pattern 6</h2>
+    <img class="cardimg0" src="webimg/card/q_lace6.jpg" alt="Lace Pattern">
+     <p>Lace Pattern Description</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/></br/>
+
+<div class="card">
+    <h2>Lace Pattern 7</h2>
+    <img class="cardimg0" src="webimg/card/q_lace7.jpg" alt="Lace Pattern">
+     <p>Lace Pattern Description</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/></br/>
+
+<div class="card">
+    <h2>Lace Pattern 8</h2>
+    <img class="cardimg0" src="webimg/card/q_lace8.jpg" alt="Lace Pattern">
+     <p>Lace Pattern Description</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/></br/>
+
+<div class="card">
+    <h2>Lace Pattern 9</h2>
+    <img class="cardimg0" src="webimg/card/q_lace9.jpg" alt="Lace Pattern">
+     <p>Lace Pattern Description</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/></br/>
+
+<div class="card">
+    <h2>Lace Pattern 10</h2>
+    <img class="cardimg0" src="webimg/card/q_lace10.jpg" alt="Lace Pattern">
+     <p>Lace Pattern Description</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/></br/>
+
+
+<div class="card">
+    <h2>Lace Pattern 11</h2>
+    <img class="cardimg0" src="webimg/card/q_lace11.jpg" alt="Lace Pattern">
+     <p>Lace Pattern Description</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/></br/>
+
+<div class="card">
+    <h2>Lace Pattern 12</h2>
+    <img class="cardimg0" src="webimg/card/q_lace12.jpg" alt="Lace Pattern">
+     <p>Lace Pattern Description</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/></br/>
+
+<div class="card">
+    <h2>Lace Pattern 13</h2>
+    <img class="cardimg0" src="webimg/card/q_lace13.jpg" alt="Lace Pattern">
+     <p>Lace Pattern Description</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/></br/>
+
+<div class="card">
+    <h2>Lace Pattern 14</h2>
+    <img class="cardimg0" src="webimg/card/q_lace14.jpg" alt="Lace Pattern">
+     <p>Lace Pattern Description</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/></br/>
+
+<div class="card">
+    <h2>Lace Pattern 15</h2>
+    <img class="cardimg0" src="webimg/card/q_lace15.jpg" alt="Lace Pattern">
+     <p>Lace Pattern Description</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/></br/>
+
+<div class="card">
+    <h2>Lace Pattern 16</h2>
+    <img class="cardimg0" src="webimg/card/q_lace16.jpg" alt="Lace Pattern">
+     <p>Lace Pattern Description</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/></br/>
+
+<div class="card">
+    <h2>Lace Pattern 17</h2>
+    <img class="cardimg0" src="webimg/card/q_lace17.jpg" alt="Lace Pattern">
+     <p>Lace Pattern Description</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/></br/>
+
+<div class="card">
+    <h2>Lace Pattern 18</h2>
+    <img class="cardimg0" src="webimg/card/q_lace18.jpg" alt="Lace Pattern">
+     <p>Lace Pattern Description</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/></br/>
+
+<div class="card">
+    <h2>Lace Pattern 19</h2>
+    <img class="cardimg0" src="webimg/card/q_lace19.jpg" alt="Lace Pattern">
+     <p>Lace Pattern Description</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/></br/>
+
+<div class="card">
+    <h2>Lace Pattern 20</h2>
+    <img class="cardimg0" src="webimg/card/q_lace20.jpg" alt="Lace Pattern">
+     <p>Lace Pattern Description</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/></br/>
+
+
+
+
+
+
+
+<h2>Cords, Tassels and Braids</h2>
+
+<h3>🧵 The Magic of Crochet Cords</h3>
+<p>
+A cord is much more than decoration. In amigurumi and decorative crochet, cords become arms, legs, ears, tails, ties, belts, garlands and even entire compositions. They act like lines in a drawing or melody in a song — small details that bring a character to life and make the image complete.
+</p>
+
+<p>
+A cord can become a necklace, a purse handle, a dress belt, or a picture frame. Working with cords teaches patience, rhythm and attention to detail. Creating a first cord often feels like discovering how to connect separate parts into one harmonious whole.
+</p>
 <a href="#top" class="top">Top of the page</a>
 <br/><br/>
 
 
-<h2>Basket Weave Stitch</h2>
+
+<h3>✨ Types of Crochet Cords</h3>
 <p>
-Basket weave is created by alternating front post double crochet (FPDC) and back post double crochet (BPDC).
-</p><p>
-This technique forms a woven texture that looks like interlaced strips.
-It adds depth, structure and a strong decorative effect to crochet fabric.
+Our collection includes a wide variety of cords, each with its own texture, flexibility and purpose.
 </p>
-<div class="image-row2" >
-<img class="img2" src="webimg/texture/tex12.jpg" alt="Crochet Cords - Braided cord"  />
-<img class="img2" src="webimg/texture/tex13.jpg" alt="Crochet Cords - Stretchy two-strand cord"  />
-</div>
 
-
-<h2>Jacob's Ladder Stitch</h2>
 <p>
-Jacob’s Ladder creates long vertical chains that are later pulled through each other to form dramatic ladders or braids.
+🔸 Flat and round cords — each creates a different visual effect<br/>
+🔸 Single- and double-sided cords — double-sided cords are perfect when the back side is visible<br/>
+🔸 Elastic and firm cords — ideal for tails, legs, ties or structural elements<br/>
+🔸 Tubular, twisted, caterpillar, leaf-shaped and lace cords — each carries its own character and mood
+</p>
+
+<p><b>Main categories:</b></p>
+<p>
+✨ Classic cords — chains, slip-stitch cords, twisted yarn cords<br/>
+🧶 Volumetric cords — i-cords, tubular cords, caterpillar cords<br/>
+🌿 Decorative cords — zigzags, twisted, leaf-shaped, lace cords<br/>
+🎀 Functional cords — ties, handles, belts, borders
+</p>
+
+
+<h3>🎨 What Working With Cords Develops</h3>
+<p>
+Crocheting cords helps develop both technical and creative skills:
 </p><p>
-This technique adds movement and sculptural texture and is often used in lace and decorative crochet.
+🔸 Technical thinking — calculating length, density and hook size<br/>
+🔸 Aesthetic sense — combining colours, textures and shapes<br/>
+🔸 Composition — how to begin, attach and finish cords neatly<br/>
+🔸 Character design — how shape and movement express emotion
+</p>
+
+<p>
+In the master classes you will learn how to:
+</p><p>
+• calculate cord length and density<br/>
+• choose yarn and hook size<br/>
+• attach cords securely to your work<br/>
+• use cords as accents or structural elements<br/>
+• combine colours and textures creatively
+</p>
+
+
+<p>
+🔶 <b>Petal / Pearl Cord</b> — dense, round cord made with slip stitches and single crochets. Twisted and rope-like.
+</p>
+
+
+<h3>🌿 Lace Cords and Braids</h3>
+<p>
+🔸 Zig-zag braid<br/>
+🔸 Pearl braid<br/>
+🔸 Leaf braid<br/>
+🔸 Circular slip-stitch cord
+</p><p>
+Cords are both structural and expressive. They shape movement, create balance and give crocheted characters their personality and charm.
 </p>
 <a href="#top" class="top">Top of the page</a>
 <br/><br/>
+
+
+
+<h1>🎀 My Favourite Crochet Cords</h1>
+<p>Here are the cords most frequently used in my toys and projects. Each one has its own purpose, character and visual style.</p>
+<h2>🧶 Longitudinal Crochet Cords (Precise Length)</h2>
+
+
+<div class="card">
+    <h2>🔶 Traditional Chain</h2>
+    <img class="cardimg" src="webimg/card/q_cord1.jpg" alt="Braids and Cords">
+    <div class="pink1">
+        <ul class="cardlist">
+            <li>Dense</li>
+            <li>Stretchy</li>
+            <li>Fully reversible</li>
+            <li>Soft texture</li>
+            <li>Beginner friendly</li>
+        </ul>
+    </div>
+    <p>Traditional Chain — the simplest and most universal cord.</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/><br/>
+
+
+<div class="card">
+    <h2>🔶 Knotted Cord</h2>
+    <img class="cardimg" src="webimg/card/q_cord2.jpg" alt="Braids and Cords">
+    <div class="pink1">
+        <ul class="cardlist">
+            <li>Dense</li>
+            <li>Stretchy</li>
+            <li>Fully reversible</li>
+            <li>Soft texture</li>
+            <li>Beginner friendly</li>
+        </ul>
+    </div>
+    <p>Knotted Cord — elastic ribbon-like cord with a playful zigzag texture.</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/><br/>
+
+
+<div class="card">
+    <h2>🔶 Fishbone Cord</h2>
+    <img class="cardimg" src="webimg/card/q_cord3.jpg" alt="Fishbone Cord">
+    <div class="pink1">
+        <ul class="cardlist">
+            <li>Dense</li>
+            <li>Stretchy</li>
+            <li>Fully reversible</li>
+            <li>Soft texture</li>
+            <li>Beginner friendly</li>
+        </ul>
+    </div>
+    <p><b>Fishbone Cord</b> — dense and braid-like with very little stretch. Holds its shape beautifully.</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/><br/>
+
+
+<div class="card">
+    <h2>🔶 Double Cord </h2>
+    <img class="cardimg" src="webimg/card/q_cord4.jpg" alt="Braids and Cords">
+    <div class="pink1">
+        <ul class="cardlist">
+            <li>Dense</li>
+            <li>Stretchy</li>
+            <li>Fully reversible</li>
+            <li>Soft texture</li>
+            <li>Beginner friendly</li>
+        </ul>
+    </div>
+    <p><b>Double Cord</b> — square-profile cord created using a different yarn grab technique.</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/><br/>
+
+<div class="card">
+    <h2>🔶 Foundation Cord (Two Strands)</h2>
+    <img class="cardimg" src="webimg/card/q_cord5.jpg" alt="Braids and Cords">
+    <div class="pink1">
+        <ul class="cardlist">
+            <li>Dense</li>
+            <li>Stretchy</li>
+            <li>Fully reversible</li>
+            <li>Soft texture</li>
+            <li>Beginner friendly</li>
+        </ul>
+    </div>
+    <p><b>Foundation Cord (Two Strands)</b> — similar to the single-strand version but thicker and more stable.</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/><br/>
+
+
+<div class="card">
+    <h2>🔶 2-Loop I-Cord</h2>
+    <img class="cardimg" src="webimg/card/q_cord6.jpg" alt="Braids and Cords">
+    <div class="pink1">
+        <ul class="cardlist">
+            <li>Dense</li>
+            <li>Stretchy</li>
+            <li>Fully reversible</li>
+            <li>Soft texture</li>
+            <li>Beginner friendly</li>
+        </ul>
+    </div>
+    <p>2-Loop I-Cord — smooth tubular cords worked with two or three active loops. Soft, rounded and perfect for limbs and tails.</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/><br/>
+
+
+<div class="card">
+    <h2>🔶 3-Loop I-Cord</h2>
+    <img class="cardimg" src="webimg/card/q_cord7.jpg" alt="Braids and Cords">
+    <div class="pink1">
+        <ul class="cardlist">
+            <li>Dense</li>
+            <li>Stretchy</li>
+            <li>Fully reversible</li>
+            <li>Soft texture</li>
+            <li>Beginner friendly</li>
+        </ul>
+    </div>
+    <p>3-Loop I-Cord — smooth tubular cords worked with two or three active loops. Soft, rounded and perfect for limbs and tails.</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/><br/>
+
+
+<div class="card">
+    <h2>🔶 Two-Thread Braided Alternating Cord</h2>
+    <img class="cardimg" src="webimg/card/q_cord8.jpg" alt="Braids and Cords">
+    <div class="pink1">
+        <ul class="cardlist">
+            <li>Dense</li>
+            <li>Stretchy</li>
+            <li>Fully reversible</li>
+            <li>Soft texture</li>
+            <li>Beginner friendly</li>
+        </ul>
+    </div>
+    <p>Two-Thread Braided Alternating Cord — dense and non-stretchy, can be made with hook or fingers</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/><br/>
+
+
+<div class="card">
+    <h2>🔶 Two-Thread Stretchy Alternating Cord</h2>
+    <img class="cardimg" src="webimg/card/q_cord9.jpg" alt="Braids and Cords">
+    <div class="pink1">
+        <ul class="cardlist">
+            <li>Dense</li>
+            <li>Stretchy</li>
+            <li>Fully reversible</li>
+            <li>Soft texture</li>
+            <li>Beginner friendly</li>
+        </ul>
+    </div>
+    <p>Stretchy two-strand cord — elastic and flexible</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/><br/>
+
+
+
+<div class="card">
+    <h2>🔶 Foundation Cord (One Strand)</h2>
+    <img class="cardimg" src="webimg/card/q_cord10.jpg" alt="Braids and Cords">
+    <div class="pink1">
+        <ul class="cardlist">
+            <li>Dense</li>
+            <li>Stretchy</li>
+            <li>Fully reversible</li>
+            <li>Soft texture</li>
+            <li>Beginner friendly</li>
+        </ul>
+    </div>
+    <p>Foundation Cord (One Strand) — moderately elastic and looser than a chain. Excellent for starting crochet fabric without tension.
+
+</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/><br/>
+
+
+<div class="card">
+    <h2>🔶 Modified Fishbone Cord</h2>
+    <img class="cardimg" src="webimg/card/q_cord11.jpg" alt="Braids and Cords">
+    <div class="pink1">
+        <ul class="cardlist">
+            <li>Dense</li>
+            <li>Stretchy</li>
+            <li>Fully reversible</li>
+            <li>Soft texture</li>
+            <li>Beginner friendly</li>
+        </ul>
+    </div>
+    <p>Modified Fishbone Cord — a textured variation with added chain loops.</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/><br/>
+
+
+<div class="card">
+    <h2>🔶 Spiral Cord </h2>
+    <img class="cardimg" src="webimg/card/q_cord12.jpg" alt="Braids and Cords">
+    <div class="pink1">
+        <ul class="cardlist">
+            <li>Dense</li>
+            <li>Stretchy</li>
+            <li>Fully reversible</li>
+            <li>Soft texture</li>
+            <li>Beginner friendly</li>
+        </ul>
+    </div>
+    <p>Spiral Cord — tubular cord worked in continuous spiral using front-loop single crochet. Hollow inside, perfect for inserting a core to reduce stretch.</p>
+</div>
+<a href="#top" class="top">Top of the page</a>
+<br/><br/><br/>
+
+
+
+
+
+
 
 
 
@@ -2546,9 +3628,6 @@ Tunisian stitch, also known as Afghan crochet, is a crochet technique that uses 
 </p>
 <a href="#top" class="top">Top of the page</a>
 <br/><br/><hr/><br/></br/>
-
-
-
 
 
 <h1>Crochet Glossary</h1>
@@ -2679,14 +3758,19 @@ Tunisian stitch, also known as Afghan crochet, is a crochet technique that uses 
 <br/> 🔶 Irish Lace
 </p>
 
-<div class="video">
-<iframe width="560" height="315" 
-src="https://www.youtube.com/embed/VIDEO_ID" 
-title="YouTube video player" 
-frameborder="0" 
-allowfullscreen>
+<iframe
+    width="500"
+    height="500"
+    src="https://www.youtube-nocookie.com/embed/ggVokAfDak8"
+    title="YouTube Shorts"
+    frameborder="0"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen>
 </iframe>
-</div>
+<a href="https://www.youtube.com/shorts/ggVokAfDak8">
+    Смотреть видео
+</a>
 
 <h3>Practice</h3>
 <p>
@@ -2769,7 +3853,7 @@ Lesson 4 – Working in the Round
 
 
 <h2>Basic Crochet Symbols and Abbreviations</h2>
-<table style="background-color:#ffffff; color:#000000; font-size:11pt; border:1px solid #ff9966;text-align:center;">
+<table style="background-color:#ffffff; color:#000000; font-size:11pt; border:1px solid #ff9966;text-align:center; max-width: 900px;">
 <tr style="text-align:center; font-size:12pt; border:1px solid #ff9966;"  >
 <td><br/><b>Crochet Element</b><br/>&nbsp;</td>
 <td><br/><b>Abbreviation</b><br/>&nbsp;</td>
@@ -2984,7 +4068,7 @@ Lesson 4 – Working in the Round
 </table>
 
 </div>
-
+</div>
 
 
 
