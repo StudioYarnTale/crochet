@@ -1,0 +1,221 @@
+/* =====   YarnTale Crochet School   crochet.css
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 768px) {
+    body {font-size: 14pt;  }
+    .content,
+    .button-menu,
+    nav {        width: 100%;        max-width: 100%;    }
+    .content {        padding: 10px 15px;    }
+    .content h1 { font-size: 20pt; }
+    .content h2 { font-size: 17pt; }
+    .content h3 { font-size: 14pt; }
+    .button-menu {        flex-wrap: wrap;        gap: 8px;        height: auto;    }
+    .button-menu a {        width: auto;        padding: 6px 12px;        font-size: 11pt;    }
+    img {        max-width: 100%;        height: auto;    }
+}
+
+/* ---------- PAGE ---------- */
+body {
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    font-family: "Comic Sans MS", Calibri, Arial, Garamond;
+    font-size: 12pt;
+    color: #663300;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+/* ---------- HEADER ---------- */
+.top-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #ffffff;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.lang-switch {position: absolute;    top: 10px;    right: 20px;    font-size: 10pt;}
+.lang-switch a {    text-decoration: none;    margin-left: 6px;    color: #cc3300;}
+
+/* ---------- FOOTER ---------- */
+.footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 10pt;
+    background: #F27805;
+    color: #ffffff;
+}
+
+/* ---------- CONTENT ---------- */
+.content {
+    width: 900px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px;
+    background: #ffffff;
+    color: #660000;
+}
+
+.content p {
+    font-size: 12pt;
+    line-height: 1.5;
+    text-align: justify;
+    text-indent: 2em;
+    margin-bottom: 1.2em;
+}
+
+.content h1 {    text-align: center;    color: #F27805;    font-size: 22pt;}
+.content h2 {    text-align: center;    color: #F27805;    font-size: 18pt;    font-weight: bold;}
+.content h3 {    text-align: center;    color: #cc3300;    font-size: 14pt;    font-weight: bold;}
+.content h4 {
+    font-size: 22pt;
+    width: 900px;
+    text-align: center;
+    line-height: 1.5;
+    color: #990000;
+    text-indent: 0;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+.content h6 {    text-align: center;    color: #cc3300;    font-size: 26pt;    font-weight: bold;    margin: 0;}
+h5.symbol{
+    font-family: Arial, sans-serif;
+    font-size: 60px;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+img.symbol{    width: 100px;    height: 100px;    display: inline-block;    margin: 0;    padding: 0;    border: 0;}
+
+.content a {    color: #993300;    font-weight: bold;    text-decoration: none;}
+.content a:hover {    color: #ff3300;}
+
+
+/* ---------- MENU ---------- */
+
+nav {    width: 900px;    margin: auto;}
+.button-menu {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    width: 900px;
+    height: 40px;
+    margin: 5px auto;
+    padding: 5px 0;
+}
+
+.button-menu a {
+    display: inline-block;
+    width: 145px;
+    padding: 5px;
+    text-align: center;
+    background: #FEEFE2;
+    color: #CA1414;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 12pt;
+    border-top: 1px solid #F36600;
+    border-bottom: 1px solid #F36600;
+    box-shadow: 2px 3px 6px rgba(102,51,0,0.2);
+    transition: all 0.3s ease;
+}
+.button-menu a:hover {    background: #F27805;    color: #ffffff;    transform: translateY(-2px);}
+.button-menu a:active {    color: #ffffff;    background: #d36600;}
+
+
+/* ---------- ANCHORS ---------- */
+a.top {    scroll-margin-top: 250px;    font-size: 10pt;    color: #ff9966;}
+a.chapter {    scroll-margin-top: 250px;    font-size: 11pt;    color: #990000;    text-decoration: none;}
+a.lesson {    scroll-margin-top: 250px;    font-size: 10pt;    color: #990000;    text-decoration: none;}
+
+
+/* ---------- TABLE ---------- */
+.content table{    width:900px;    margin:0;    border-collapse:collapse;    border:1px solid #fdd;    background:#fff0f0;}
+.content table tr{    border-bottom:1px solid #fcc;}
+.content table td{    padding:6px;    font-size:1em;    line-height:1.3em;    text-align:center;    color:#993333;    background:#fff;}
+
+/* ---------- SYMBOL TABLE ---------- */
+.content table.symtb{    width:900px;    margin:30px auto;    border-collapse:collapse;    border:2px solid #F4B183;    background:#fff;}
+.content table.symtb th{    padding:20px;    font-size:20pt;    color:#F27805;    background:#fff;    border-bottom:2px solid #F4B183;}
+.content table.symtb td{    padding:10px;    vertical-align:middle;    border-bottom:1px solid #eee;    background:#fff;}
+.content table.symtb td.symtbl2{    width:100px;    text-align:center;}
+.content table.symtb td.symtbl3{    width:80px;    text-align:center;    font-size:18pt;    font-weight:bold;    color:#F27805;}
+.content table.symtb td.symtbl4{    width:200px;    text-align:left;    font-size:14pt;    color:#333;}
+.content table.symtb td:nth-child(3){    border-right:1px solid #F4B183;}
+.content table.symtb img.symimg{    width:60px;    height:auto;}
+.tbl-img{    width:100px;    height:auto;}
+
+
+
+/* ---------- CARDS ---------- */
+.card{    position:relative;    display:inline-block; width: 950px;    margin: 20px auto;}
+.card img{    display:block;    width:100%;    height:auto;    /*border: 1px solid #F4B183;*/}
+.cardimg{    display:block;    width:100%;    height:auto;    border: 1px solid #F4B183;}
+.cardimg0{    display:block;    width:100%;    height:auto;    border: 0px solid #F4B183;}
+
+.pink{
+    position:absolute;
+    left:550px;
+    top:350px;
+    width:320px;
+    height:160px;
+    padding:8px 12px;
+    box-sizing:border-box;
+    /*background:rgba(255,0,0,0.15);*/
+}
+
+.pink1{
+    position:absolute;
+    left:620px;
+    top:100px;
+    width:320px;
+    height:160px;
+    padding:8px 12px;
+    box-sizing:border-box;
+    /*background:rgba(255,0,0,0.15);*/
+}
+
+.cardlist{    margin:0;    padding-left:18px;}
+.cardlist li{    margin:0;    line-height:1.25;    font-size:1.4rem;    color:#6f6262;    color:#F4B183;    color:#cc3300;}
+
+
+.cardlist{    margin:0;    padding-left:0;    list-style:none;}
+.cardlist li{    margin:0;    line-height:1.25;    font-size:1.4rem;    color:#cc3300;}
+.cardlist li::before{    content:"✿";    margin-right:10px;}
+
+
+
+/* ---------- IMAGE ROWS ---------- */
+.image-row,.image-row1,.image-row2,.image-row3,.image-row3s,.image-row4{    width:900px;    display:flex;}
+.image-row,.image-row2,.image-row3,.image-row3s,.image-row4{    justify-content:space-between;}
+.image-row{gap:10px;}
+.image-row1{    flex-direction:column;    align-items:center;    gap:20px;}
+.image-row1 img{width:850px;height:auto;}
+.image-row2{gap:30px;}
+.image-row3{    gap:15px;    text-align:justify;    font-size:9px;}
+.image-row3s{    gap:45px;    text-align:justify;}
+.image-row4{    gap:6px;    text-align:justify;    font-size:.8em;    line-height:1.1em;    color:#333;}
+
+.image-row p{    font-size:9pt;    line-height:1.4;    text-indent:0;    margin:0;}
+
+/* ---------- IMAGES ---------- */
+.content img{display:inline-block;vertical-align:baseline;}
+.img1,.img2,.img3,.img0,.img3s,.img4{border:1px solid #ffcccc;}
+.img3s,.img4{    margin-top:10px;    border-radius:0;    box-shadow:0 2px 6px rgba(70,0,0,.05);}
+.img1{width:900px;}
+.img2{width:430px;}
+.img3{width:290px;}
+.img0{width:500px;    display:block;    margin:20px auto;    border-radius:0;    box-shadow:0 2px 6px rgba(70,0,0,.05);}
+.img3s{width:270px;}
+.img4{width:220px;}
+.img01{width:70px;margin:0;padding:0;}
+.img_les4{width:800px;border:0;box-shadow:none;}
